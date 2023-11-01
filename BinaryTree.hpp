@@ -1,0 +1,29 @@
+#pragma once
+#include "Node.hpp"
+
+class BinaryTree
+{
+
+private:
+	Node* root;
+	void updateHeight(Node* node);
+	int getBalanceFactor(Node* node);
+	Node* rotateRight(Node* y);
+	Node* rotateLeft(Node* x);
+	Node* balance(Node* node, int value);
+	Node* insert(Node* node, int value);
+	int getHeight(Node* node);
+	int getTreeDepth(Node* node);
+	void inOrder(Node* node, int level);
+	void preOrder(Node* node, int level);
+	void postOrder(Node* node, int level);
+
+public:
+	BinaryTree();
+	void insert(int value);
+	int getTreeDepth();
+	void printInOrder();
+	void printPreOrder();
+	void printPostOrder();
+};
+
